@@ -1,2 +1,4 @@
 # test_repository
-Testing repository creation.
+This is my first repository test.
+
+Lets make the first repo!

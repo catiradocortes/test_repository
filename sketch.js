@@ -52,7 +52,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(255);
   if (drawSegments) {
     //lets draw the segments to the canvas
     for (const segment of segments) {
@@ -73,9 +73,16 @@ function keyPressed() {
   }
 }
 
-
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+  calculateImageDrawProperties();
+}
 
 function calculateImageDrawProperties() {
+
+  //! calculate the aspect ratio of the image
+  canvasAspectRatio = width/height;
+
   //if the image is wider than the canvas
   if (imgDrawProperties.aspect > canvasAspectRatio) {
     //then we will draw the image to the width of the canvas
